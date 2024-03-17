@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+</head>
+<body>
+    <header>
+        <h1 style="font-family: 'Marker Felt'" style="background-color: darkgreen ">
+            Krusty Krab Pizza
+        </h1>
+
+
+    </header>
+    <main>
+        <form action="order_confirmation.html" method="POST">
+            <!-- Number of Pizzas -->
+            <fieldset>
+                <legend>Number of Pizzas</legend>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            </fieldset>
+
+            <!-- Size -->
+            <fieldset>
+                <legend>Size</legend>
+                <label><input type="radio" name="size" value="personal"> Personal</label>
+                <label><input type="radio" name="size" value="small"> Small</label>
+                <label><input type="radio" name="size" value="medium" checked> Medium</label>
+                <label><input type="radio" name="size" value="large"> Large</label>
+                <label><input type="radio" name="size" value="monster"> Monster</label>
+                <label><input type="radio" name="size" value="legend"> Legend</label>
+            </fieldset>
+
+            <!-- Shape -->
+            <fieldset>
+                <legend>Shape</legend>
+                <label><input type="radio" name="shape" value="round" checked> Round</label>
+                <label><input type="radio" name="shape" value="square"> Square</label>
+            </fieldset>
+            <!-- slices -->
+            <fieldset>
+                <legend>slices</legend>
+                <select name="slices">
+                    <option value="0" selected >None</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                </select>
+            </fieldset>
+
+
+            <!-- Toppings -->
+            <fieldset>
+                <legend>Toppings</legend>
+                <label><input type="checkbox" name="topping" value="pepperoni"> Pepperoni</label>
+                <label><input type="checkbox" name="topping" value="mushrooms"> Mushrooms</label>
+                <label><input type="checkbox" name="topping" value="olives"> Olives</label>
+                <label><input type="checkbox" name="topping" value="sausage"> Sausage</label>
+            </fieldset>
+
+            <!-- Crust Type -->
+            <fieldset>
+                <legend>Crust Type</legend>
+                <select name="crust">
+                    <option value="deep-dish">Deep Dish</option>
+                    <option value="thin-crust">Thin Crust</option>
+                    <option value="regular" selected>Regular</option>
+                    <option value="pan">Pan</option>
+                    <option value="cheesy">Cheesy Crust</option>
+                    <option value="gluten free">Gluten Free</option>
+                </select>
+            </fieldset>
+
+            <!-- Delivery Options -->
+            <fieldset>
+                <legend>Delivery Options</legend>
+                <label><input type="radio" name="delivery" value="take-out" checked> Take Out</label>
+                <label><input type="radio" name="delivery" value="delivery"> Delivery</label>
+                <label><input type="radio" name="delivery" value="eat-in"> Eat In</label>
+            </fieldset>
+
+            <!-- Additional Comments -->
+            <fieldset>
+                <legend>Additional Comments</legend>
+                <textarea name="comments" rows="4" cols="50" placeholder="Any special requests or comments?"></textarea>
+            </fieldset>
+
+            <!-- Contact Information -->
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Place Order">
+            <input type="reset" value="Reset Form">
+        </form>
+    </main>
+    <footer>
+        <p>Thank you for choosing Krusty Krab Pizza!</p>
+    </footer>
+</body>
+</html>
